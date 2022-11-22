@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size:17px;
+}
+body {
+  background-color:#7ff9dc;
+}
+.wrapper {
+  box-sizing: content-box;
+  width: 26.87em;
+  padding: 2em 2.5em;
+  background: linear-gradient(45deg,#c9f3fc, #fbc1ec);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 2em;
+  box-shadow: 0 0.9em 2.8em rgb(248, 47, 47);
+}
+.game-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.6em;
+}
+.stats-container {
+  text-align: right;
+  margin-bottom: 1.2em;
+}
+.stats-container span {
+  font-weight: 600;
+}
+#level-stats{
+   font-size:1.2em;
+   position: relative;
+   left:-12.7em;
+   top:0.8em;
+}
+.card-container {
+  position: relative;
+  width: 6.25em;
+  height: 6.25em;
+  cursor: pointer;
+}
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-out;
+  backface-visibility: hidden;
+  box-shadow: 0.04em 0.07em 0.04em rgb(0, 0, 0);
+}
+.card-before {
+  background: linear-gradient(#02324d, #160142);
+  font-size: 2.8em;
+  font-weight: 600;
+}
+.card-after {
+  background: linear-gradient(#b1bcd7, #f39ffc);
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-before {
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+}
+.image{
+  width:5em;
+}
+.controls-container{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#000000, #625656);
+  top: 0;
+}
+#memory-img{
+  width:25em;
+  top: -2em;
+  position: relative;
+}
+button {
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  margin: 0.5em;
+  width:10em;
+  background: linear-gradient(#eae8e8, #b8b5b8);
+}
+.black{
+  font-size: 1.1em;
+  display: block;
+  margin: 1.1em auto 0 auto;
+  background: linear-gradient(#343434, #161616);
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0.3em 1em rgba(86, 66, 0, 0.2);
+}
+.controls-container button {
+  font-size: 1.3em;
+  box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+.hide {
+  display: none;
+}
+#result {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #160142;
+  font-weight: 800;
+  text-shadow: 0 0 3px #fefefe, 0 0 5px #f7f7fa;
+}
+#result h2 {
+  font-size: 4.5em;
+}
+#result h3 {
+  font-size: 2.3em;
+  color: #160142;
+  font-family: sans;
+}
+#play{
+  margin-top:3em;
+}
+#level-container{
+  text-align:center;
+  padding-top: 10em;
+}
+#level-container h1{
+  font-size:2.5em;
+}
+
+#about-container{
+  margin:2em auto 0em;
+  max-width:50em;
+  padding: 2em;
+  font-size:1.4em;
+  font-weight: 600;
+}
+#about-container h3{
+  font-size: 1.2em;
+  padding-bottom:1.5em;
+}
+#about-container ul{
+  padding-left: 3.4em;
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 5em;
+  list-style: none;
+}
+#back{
+  font-size: 0.8em;
+  width: 6em;
+  border-radius: 2.2em;
+}
+#exit{
+  font-size: 1em;
+  width: 6em;
+  border-radius: 2.2em;
+}
+#stop{
+  border-radius: 3em;
+}
+.shake{
+  animation: shake 0.3s; 
+}
+
+
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+
+
+
+@media screen and (max-width:500px){
+     *{
+      font-size: 11px;
+     }
+}

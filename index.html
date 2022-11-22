@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <div class="stats-container">
+      <span id="level-stats"></span>
+      <span id="moves-count"></span>
+      <div id="time"></div>
+    </div>
+    <div class="game-container"></div>
+    <button id="stop" class="hide black" onclick="playbeep()">Stop Game</button>
+  </div>
+  <div class="controls-container">
+    <img src="memory-game.png" alt="image" id="memory-img">
+    <p id="result"></p>
+    <button id="start" onclick="playbeep()">Start Game</button>
+    <button id="level" onclick="playbeep()">Level: <span id="level-value">Easy</span></button>
+    <button id="music" onclick="playbeep()">Music: <span id="music-value" value="OFF">OFF</span></button>
+    <button id="about" onclick="playbeep()">About Us</button>
+    <button id="play" onclick="playbeep()" class="hide">Play Again</button>
+    <button id="menu" onclick="playbeep()" class="hide">Menu</button>
+    <button id="exit" onclick="playbeep()">Exit</button>
+  </div>
+  <div class="hide" id="level-container" value="Easy">
+    <h1>Select Level</h1>
+    <button id="easy" class="black" onclick="playbeep()">Easy</button>
+    <button id="medium" class="black" onclick="playbeep()">Medium</button>
+    <button id="difficult" class="black" onclick="playbeep()">Difficult</button>
+    <button id="impossible" class="black" onclick="playbeep()">Impossible</button>
+  </div>
+  <div class="hide" id="about-container">
+    <h3>Memory Matching Game is a simple online fun game, which contains various levels. It also calculates how many
+      moves and how much time taken by a player to finish the game. This project is made using HTML,CSS and JavaScript.
+    </h3>
+    
+    <button id="back" class="black" onclick="playbeep()">back</button>
+  </div>
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
